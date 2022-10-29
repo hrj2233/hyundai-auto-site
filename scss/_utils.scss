@@ -1,0 +1,57 @@
+/*반응형 화면 크기*/
+$smallest: 320px;
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1366px;
+$mobility: 1450px;
+$area: 1540px;
+
+/*반응형, 브라우저 크기가 767px 이하일때*/
+@mixin smallest {
+	@media (max-width: $smallest) {
+		@content;
+	}
+}
+@mixin mobile {
+	@media (max-width: $mobile) {
+		@content;
+	}
+}
+
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+@mixin tablet {
+	@media (max-width: $tablet) {
+		@content;
+	}
+}
+
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+@mixin desktop {
+	@media (max-width: $desktop) {
+		@content;
+	}
+}
+
+@mixin area {
+	@media (max-width: $area) {
+		@content;
+	}
+}
+
+@mixin mobility {
+	@media (max-width: $mobility) {
+		@content;
+	}
+}
+
+@mixin noScroll {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+
+	/* Firefox */
+	&::-webkit-scrollbar {
+		display: none;
+		/* Chrome, Safari, Opera*/
+	}
+}
